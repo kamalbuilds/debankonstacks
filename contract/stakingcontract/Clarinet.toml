@@ -1,5 +1,5 @@
 [project]
-name = "blank-project"
+name = "staking"
 description = "Create a project from scratch: Start from a blank scaffold for your next Clarity contract"
 authors = []
 telemetry = true

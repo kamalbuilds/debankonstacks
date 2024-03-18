@@ -1,5 +1,5 @@
 {
-  "name": "fungible-token",
+  "name": "stacks-coin",
   "version": "1.0.0",
   "description": "fungible token smart contract example",
   "type": "module",

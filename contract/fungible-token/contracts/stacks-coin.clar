@@ -2,7 +2,7 @@
 (impl-trait 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.sip-010-trait)
 
 ;; Define the FT, with no maximum supply
-(define-fungible-token clarity-coin)
+(define-fungible-token stacks-coin)
 
 ;; Define errors
 (define-constant ERR_OWNER_ONLY (err u100))
@@ -10,20 +10,20 @@
 
 ;; Define constants for contract
 (define-constant CONTRACT_OWNER tx-sender)
-(define-constant TOKEN_URI u"https://hiro.so") ;; utf-8 string with token metadata host
-(define-constant TOKEN_NAME "Clarity Coin")
-(define-constant TOKEN_SYMBOL "CC")
+(define-constant TOKEN_URI "SIP-010 Stacks Coin")
+(define-constant TOKEN_NAME "STX Coin")
+(define-constant TOKEN_SYMBOL "STXC")
 (define-constant TOKEN_DECIMALS u6) ;; 6 units displayed past decimal, e.g. 1.000_000 = 1 token
 
 
 ;; SIP-010 function: Get the token balance of a specified principal
 (define-read-only (get-balance (who principal))
-  (ok (ft-get-balance clarity-coin who))
+  (ok (ft-get-balance stacks-coin who))
 )
 
 ;; SIP-010 function: Returns the total supply of fungible token
 (define-read-only (get-total-supply)
-  (ok (ft-get-supply clarity-coin))
+  (ok (ft-get-supply stacks-coin))
 )
 
 ;; SIP-010 function: Returns the human-readable token name
@@ -51,7 +51,7 @@
 (define-public (mint (amount uint) (recipient principal))
   (begin
     (asserts! (is-eq tx-sender CONTRACT_OWNER) ERR_OWNER_ONLY)
-    (ft-mint? clarity-coin amount recipient)
+    (ft-mint? stacks-coin amount recipient)
   )
 )
 
@@ -66,7 +66,7 @@
   (begin
     ;; #[filter(amount, recipient)]
     (asserts! (is-eq tx-sender sender) ERR_NOT_TOKEN_OWNER)
-    (try! (ft-transfer? clarity-coin amount sender recipient))
+    (try! (ft-transfer? stacks-coin amount sender recipient))
     (match memo to-print (print to-print) 0x)
     (ok true)
   )
