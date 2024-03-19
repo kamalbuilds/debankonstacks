@@ -8,6 +8,9 @@ import { Connect } from "@stacks/connect-react";
 
 import ConnectWallet, { userSession } from "../components/ConnectWallet";
 import ContractCallVote from "../components/ContractCallVote";
+import LazyYoutube from "@/components/LazyYoutube";
+
+
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -35,91 +38,30 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/app/page.js</code>
+            Debank on Stacks
           </p>
           <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{" "}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+          <p>
+            Use your NFTs as collateral to secure loans on the bitcoin layer2
+          </p>
           </div>
         </div>
 
         <div className={styles.center}>
-          <h2>Next.js + Stacks.js 👋</h2>
-        </div>
+          <h2>DeBank on Stacks 🏦</h2>
 
-        <div>
+          <LazyYoutube videoId={"_7GBtvhHg3c"} />
           {/* ConnectWallet file: `./src/components/ConnectWallet.js` */}
-          <ConnectWallet />
+
 
           {/* ContractCallVote file: `./src/components/ContractCallVote.js` */}
-          <ContractCallVote />
+          {/* <ContractCallVote /> */}
         </div>
 
         <div className={styles.grid}>
           <br />
-
-          <a
-            href="https://docs.hiro.so/"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn Stacks <span>→</span>
-            </h2>
-          </a>
-
-          <a
-            href="https://docs.hiro.so/stacks.js/overview"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn to Build on Stacks <span>→</span>
-            </h2>
-          </a>
-
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>→</span>
-            </h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>→</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
-            </p>
-          </a>
+ 
+          <ConnectWallet />
         </div>
       </main>
     </Connect>

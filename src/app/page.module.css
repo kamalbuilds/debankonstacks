@@ -74,6 +74,7 @@
 
 .center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -95,10 +96,18 @@
   z-index: -1;
 }
 
+.lazyYoutubeIframe {
+  width: 500%; /* Make iframe responsive */
+  max-width: 860px; /* Maximum width */
+  height: 500px; /* Fixed height, consider making it responsive as well */
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
 .center::before,
 .center::after {
   content: '';
-  left: 50%;
+  /* left: 50%; */
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
