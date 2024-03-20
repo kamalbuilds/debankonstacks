@@ -2,6 +2,8 @@
 
 This project introduces a novel smart contract for the Stacks blockchain, allowing Stacks Monkey NFT owners to use their non-fungible tokens (NFTs) from the "Stacks Monkeys" collection as collateral to secure loans. Lenders can provide loans to these NFT owners, and if the loan is not repaid by a specified due date, the NFT collateral is transferred to the lender. This mechanism provides liquidity to NFT owners while offering lenders an opportunity to earn interest or potentially acquire valuable NFTs.
 
+Demo Video - https://youtu.be/_7GBtvhHg3c
+
 ## Features
 
 - **Stake NFTs**: NFT owners can stake their "Stacks Monkeys" NFTs as collateral for loans.
